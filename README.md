@@ -8,10 +8,10 @@ This package designed for get free games from online stores. Also thanks to [@Au
 
 ## Includes
 - [x] Epic Store
+- [x] Steam (Needs Testing see works) 
 
 ## Future Updates
 
-- [ ] Steam
 - [ ] Ubisoft
 
 ## Installation
