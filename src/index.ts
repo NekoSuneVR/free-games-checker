@@ -95,7 +95,7 @@ const fetchSteamGameDetails = async (appid: number) => {
 };
 
 // Filter Epic Games data
-async function filterEpicGames(data: any, platform: string) {
+async function filterEpicGames(data: any) {
     const gamesObj = data?.data?.Catalog?.searchStore?.elements;
 
     const filteredGames = gamesObj?.filter(
@@ -112,27 +112,7 @@ async function filterEpicGames(data: any, platform: string) {
             description: game.description,
             mainImage: game.keyImages[1]?.url ?? game.keyImages[0]?.url,
             urlSlug: game.urlSlug,
-            platform: platform
-        }));
-    }
-
-    return [];
-}
-
-// Filter Steam games data
-async function filterSteamGames(data: any, platform: string) {
-    const freeGames = data?.applist?.apps?.filter(
-        (game: { is_free: boolean; }) => game.is_free
-    );
-
-    if (freeGames?.length > 0) {
-        return freeGames.map((game: any) => ({
-            id: game.appid,
-            title: game.name,
-            description: "Free game available on Steam", // Steam API may not provide a description
-            mainImage: `${config.steam_image_url}/${game.appid}/header.jpg`, // Generate image URL dynamically
-            urlSlug: `https://store.steampowered.com/app/${game.appid}`,
-            platform: platform
+            platform: "epicgames"
         }));
     }
 
