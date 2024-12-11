@@ -61,9 +61,6 @@ export const getSteamGames = async () => {
         mainImage: game.headerImage,
         urlSlug: `https://store.steampowered.com/app/${game.appid}`,
         platform: "steam",
-        originalPrice: game.originalPrice,
-        currentPrice: game.currentPrice,
-        discount: game.discount,
     }));
 };
 
