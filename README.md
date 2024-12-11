@@ -21,10 +21,10 @@ This package designed for get free games from online stores. Also thanks to [@Au
 ## Usage 
 
 ```typescript
-import { getEpicGames } from "free-games-checker"
+import { getFreeGames } from "free-games-checker"
 
 async function main() {
-    const data = await getEpicGames('TR')
+    const data = await getFreeGames('TR')
 
     console.log(data)
 }
@@ -34,7 +34,7 @@ OR
 ```javascript
 var freeGamesChecker = require("free-games-checker")
 
-console.log(await freeGamesChecker.getEpicGames('TR'))
+console.log(await freeGamesChecker.getFreeGames('TR'))
 ```
 
 ## Output
@@ -46,14 +46,16 @@ console.log(await freeGamesChecker.getEpicGames('TR'))
     "title": "Sonic Mania",
     "description": "Sonic Mania",
     "mainImage": "https://cdn1.epicgames.com/45e7cf3c49054f2fb20b673d9b0ae69e/offer/EGS_SonicMania_Lab42_S6-510x680-b83646998d6a711b6997e076e091c015.jpg",
-    "urlSlug": "amethystgeneralaudience"
+    "urlSlug": "amethystgeneralaudience",
+    "platform": "epicgames",
   },
   {
-    "id": "58a2b650955f4920876afe86dfb563c1",
-    "title": "Horizon Chase Turbo",
-    "description": "Horizon Chase Turbo",
-    "mainImage": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HorizonChaseTurbo_AQUIRIS_S2_1200x1600-7b51e6b8f8cf6ebd50f5fb77be96ad9d",
-    "urlSlug": "lutetiumgeneralaudience"
+    "id": 123456,
+    "title": "Game Title",
+    "description": "Short description of the game.",
+    "mainImage": "https://cdn.akamai.steamstatic.com/steam/apps/123456/header.jpg",
+    "urlSlug": "https://store.steampowered.com/app/123456",
+    "platform": "steam",
   }
 ]
 
